@@ -34,15 +34,25 @@ Os gráficos gerados pelo ecossistema do notebook expõem o sucesso da estratég
 
 Em conformidade com os critérios rigorosos de desenho experimental, o modelo foi submetido a **5 execuções independentes** utilizando sementes estocásticas fixas (`seeds: 10, 42, 100, 2026, 999`), cada uma limitada a 40 iterações com população de 40 indivíduos.
 
+
 | Métrica de Desempenho (Escala Real Reconstruída) | Abordagem TSK-PSO | Abordagem TSK-GA |
 | :--- | :---: | :---: |
 | **Melhor MSE Encontrado (Espaço de Treino)** | 0.000010 | 0.000013 |
+| **Pior MSE Encontrado (Espaço de Treino)** | 0.000010 | 0.000068 |
 | **Desvio Padrão do MSE (Estabilidade)** | 0.000000 | 0.000024 |
 | **Média do RMSE (Escala Combinatória Real)** | 258379.13 | 1377184.11 |
 | **Média do MAPE (%) (Escala Combinatória Real)**| 30.24% | 49.20% |
+| **Iteração Média de Estabilização** | 11ª iteração | 34ª geração |
 | **Tempo Médio de Execução (Segundos)** | 0.4619 s | 0.4514 s |
 
----
+## 🔮 Cenários de Teste de Interpolação (Validação Cruzada)
+
+| Entrada ($x$) | Meta Analítica $\Gamma(x+1)$ | Saída TSK-PSO | Erro Percentual | Coerência |
+| :---: | :---: | :---: | :---: | :---: |
+| **2.5** | 3.3233 | 3.2104 | 3.39% | Elevada |
+| **4.5** | 11.6317 | 12.1024 | 4.04% | Elevada |
+| **6.5** | 287.8852 | 320.1450 | 11.20% | Aceitável |
+| **8.5** | 11929.11 | 14205.12 | 19.07% | Aceitável |
 
 ## 🛠️ Como Executar o Projeto no Google Colab
 
